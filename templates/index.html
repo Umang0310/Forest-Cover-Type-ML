@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url("https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 10px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .glass{
+            /* From https://css.glass */
+background: rgba(255, 255, 255, 0.28);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.4px);
+-webkit-backdrop-filter: blur(8.4px);
+border: 1px solid rgba(255, 255, 255, 0.58);
+        }
+    </style>
+</head>
+<body>
+    
+        
+        <form action="/predict" method="post" class="glass">
+            <h1>Enter Features for Prediction</h1>
+            <label for="elevation">Elevation:</label>
+            <input type="text" id="elevation" name="elevation"><br><br>
+            <label for="aspect">Aspect:</label>
+            <input type="text" id="aspect" name="aspect"><br><br>
+            <label for="slope">Slope:</label>
+            <input type="text" id="slope" name="slope"><br><br>
+            <label for="horizontal_hydro">Horizontal Distance To Hydrology:</label>
+            <input type="text" id="horizontal_hydro" name="horizontal_hydro"><br><br>
+            <label for="vertical_hydro">Vertical Distance To Hydrology:</label>
+            <input type="text" id="vertical_hydro" name="vertical_hydro"><br><br>
+            <label for="horizontal_road">Horizontal Distance To Roadways:</label>
+            <input type="text" id="horizontal_road" name="horizontal_road"><br><br>
+            <label for="hillshade_9am">Hillshade 9am:</label>
+            <input type="text" id="hillshade_9am" name="hillshade_9am"><br><br>
+            <label for="hillshade_noon">Hillshade Noon:</label>
+            <input type="text" id="hillshade_noon" name="hillshade_noon"><br><br>
+            <label for="hillshade_3pm">Hillshade 3pm:</label>
+            <input type="text" id="hillshade_3pm" name="hillshade_3pm"><br><br>
+            <label for="horizontal_fire">Horizontal Distance To Fire Points:</label>
+            <input type="text" id="horizontal_fire" name="horizontal_fire"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+   
+</body>
+</html>

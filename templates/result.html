@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url("https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        {% if prediction == 1 %}
+            <p>The predicted cover type is: Spruce/Fir</p>
+        {% elif prediction == 2 %}
+            <p>The predicted cover type is: Lodgepole Pine</p>
+        {% elif prediction == 3 %}
+            <p>The predicted cover type is: Ponderosa Pine</p>
+        {% elif prediction == 4 %}
+            <p>The predicted cover type is: Cottonwood/Willow</p>
+        {% elif prediction == 5 %}
+            <p>The predicted cover type is: Aspen</p>
+        {% elif prediction == 6 %}
+            <p>The predicted cover type is: Douglas-fir</p>
+        {% elif prediction == 7 %}
+            <p>The predicted cover type is: Krummholz</p>
+        {% else %}
+            <p>Invalid prediction value</p>
+        {% endif %}
+    </div>
+</body>
+</html>
